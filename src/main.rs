@@ -17,7 +17,7 @@ fn main() {
     println!("Hello, world!");
 
     let examples: Vec<Example> = vec![
-        Example::new("Data Types", a_data_types::example),
+        Example::new("Data Types", a_data_types::main),
         Example::new("Parsing Inputs - simple", b_parsing_inputs::simple),
         Example::new("Parsing Inputs - with error handling", b_parsing_inputs::with_error_handling),
         Example::new("Control Flow - universe number", c_control_flow::universe_number),

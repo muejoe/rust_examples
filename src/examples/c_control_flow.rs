@@ -1,5 +1,5 @@
 
-pub fn example() {
+pub fn main() {
     universe_number();
     guessing_game();
 }
@@ -33,7 +33,7 @@ pub fn guessing_game() {
     use std::cmp::Ordering;
 
     println!("Guess my number between 1 and 20:"); 
-    let secret_number = get_random_1_to_(20);
+    let secret_number = get_pseudo_random_1_to_(20);
 
     loop {
         let mut guess = String::new();
@@ -62,7 +62,7 @@ pub fn read_number() -> Result<i32, Box<dyn std::error::Error>> {
     Ok(number)
 }
 
-pub fn get_random_1_to_(max: u32) -> u32 {
+pub fn get_pseudo_random_1_to_(max: u32) -> u32 {
     use std::time::{SystemTime, UNIX_EPOCH};
     if let Ok(duration) = SystemTime::now().duration_since(UNIX_EPOCH) {
         return (duration.subsec_millis() % max) + 1

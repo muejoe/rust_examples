@@ -1,4 +1,4 @@
-pub fn example() {
+pub fn main() {
     simple();
     with_error_handling();
 }
@@ -32,7 +32,11 @@ pub fn with_error_handling() {
     }
 }
 
-// this code would abort after line with question mark and return Error in Box when not successful
+// A nice way to handle Results. Each line which ends with a question mark would return a Result.
+// The question mark would lead to an early exit if the result is an error, 
+// else it unpacks the result and continues. 
+// Result is an enum with an Ok value with an embedded i32 and 
+// an Err value with an embedded pointer to something which derived Error
 pub fn read_number() -> Result<i32, Box<dyn std::error::Error>> {
     let mut text = String::new();
     std::io::stdin().read_line(&mut text)?;
