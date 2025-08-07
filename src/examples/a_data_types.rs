@@ -80,7 +80,7 @@ fn arrays() {
         print!("{number} ");
     }
 
-    let index = 11;
+    //let index = 11;
     // println!("Index 11 of other_numbers is {}", other_numbers[index]); // Wont compile either
 
     // But it would compile, when the number is not known at compile time. 

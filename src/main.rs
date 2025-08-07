@@ -1,5 +1,7 @@
 use examples::{a_data_types, b_parsing_inputs, c_control_flow};
 
+use crate::examples::d_polymorphy;
+
 mod examples;
 
 struct Example {
@@ -22,23 +24,24 @@ fn main() {
         Example::new("Parsing Inputs - with error handling", b_parsing_inputs::with_error_handling),
         Example::new("Control Flow - universe number", c_control_flow::universe_number),
         Example::new("Control Flow - guessing game", c_control_flow::guessing_game),
+        Example::new("Polymorphy - interfaces, mocks, tests", d_polymorphy::main),
     ];
 
     loop {
 
         println!("\nList of topics:");
-        println!("┌──────────────────────────────────────────┐");
+        println!("┌────────────────────────────────────────────┐");
         
         examples.iter().enumerate()
             .for_each(|(index, e)|{
                 let number = format!("{:>width$}", index+1, width = 2);
-                let name = format!("{:width$}", e.name, width = 36);
+                let name = format!("{:width$}", e.name, width = 38);
                 println!("│ {}: {} │", number, name);    
             });
             
-        println!("├──────────────────────────────────────────┤");
-        println!("│  0: Exit Application                     │");
-        println!("└──────────────────────────────────────────┘");
+        println!("├────────────────────────────────────────────┤");
+        println!("│  0: Exit Application                       │");
+        println!("└────────────────────────────────────────────┘");
         println!("Choose one:");
 
         let mut topic = String::new();
