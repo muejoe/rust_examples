@@ -24,18 +24,15 @@ pub fn main() {
                                        .join(", ");
     println!("\nFollowing people like to read: {}", readers);
 
-    let smallest = people.iter().min_by(|a, b| 
-                                                 a.height.partial_cmp(&b.height).unwrap())
-                                                 .unwrap();
+    let smallest = people.iter().min_by(|a, b| a.height.partial_cmp(&b.height).unwrap())
+                         .unwrap();
     println!("\n{} is the smallest person of the list.", smallest.name);
 
     let sum_age: u32 = people.iter().map(|p| p.age as u32).sum();
     let average_age = sum_age as f32/ people.len() as f32;
-    println!("\n The peoples average age is {}", average_age);
+    println!("\nThe peoples average age is {}", average_age);
 
 }
-
-
 
 
 #[derive(Debug, PartialEq)]
