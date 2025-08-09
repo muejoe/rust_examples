@@ -1,6 +1,4 @@
-use examples::{a_data_types, b_parsing_inputs, c_control_flow};
-
-use crate::examples::d_polymorphy;
+use examples::{a_data_types, b_parsing_inputs, c_control_flow, d_work_with_data, e_polymorphy};
 
 mod examples;
 
@@ -24,7 +22,8 @@ fn main() {
         Example::new("Parsing Inputs - with error handling", b_parsing_inputs::with_error_handling),
         Example::new("Control Flow - universe number", c_control_flow::universe_number),
         Example::new("Control Flow - guessing game", c_control_flow::guessing_game),
-        Example::new("Polymorphy - interfaces, mocks, tests", d_polymorphy::main),
+        Example::new("Work With Data - iterators", d_work_with_data::main),
+        Example::new("Polymorphy - interfaces, mocks, tests", e_polymorphy::main),
     ];
 
     loop {
