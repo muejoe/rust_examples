@@ -1,5 +1,7 @@
 use examples::{a_data_types, b_parsing_inputs, c_control_flow, d_work_with_data, e_polymorphy};
 
+use crate::examples::f_multi_thread;
+
 mod examples;
 
 struct Example {
@@ -24,6 +26,7 @@ fn main() {
         Example::new("Control Flow - guessing game", c_control_flow::guessing_game),
         Example::new("Work With Data - iterators", d_work_with_data::main),
         Example::new("Polymorphy - interfaces, mocks, tests", e_polymorphy::main),
+        Example::new("Multi thread - exchanging numbers", f_multi_thread::main),
     ];
 
     loop {
