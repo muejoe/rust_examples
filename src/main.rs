@@ -1,8 +1,6 @@
-use examples::{a_data_types, b_parsing_inputs, c_control_flow, d_work_with_data, e_polymorphy};
-
-use crate::examples::f_multi_thread;
-
 mod examples;
+
+use examples::{a_data_types, b_parsing_inputs, c_control_flow, d_work_with_data, e_polymorphy, f_multi_thread};
 
 struct Example {
     pub name: String,

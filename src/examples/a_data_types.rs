@@ -30,7 +30,7 @@ fn floats_and_other_simple_variables() {
     // easy assignment with different formats, also underscores are allowed
     let hex_number = 0x55;
     let octal_number = 0o72;
-    let binary_number = 0b1010_1111;
+    let binary_number = (0b0101_0010 | 0b1010_0001) & 0b0011_1111;
     let formatted_number = 1_234_567_890;
     let character = b'A';
     let is_boolean = true;
@@ -80,7 +80,7 @@ fn arrays() {
         print!("{number} ");
     }
 
-    //let index = 11;
+    // let index = 11;
     // println!("Index 11 of other_numbers is {}", other_numbers[index]); // Wont compile either
 
     // But it would compile, when the number is not known at compile time. 

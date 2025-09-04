@@ -21,7 +21,7 @@ pub fn universe_number() {
     // work with the number
     if number > 42 {
         println!("Your number is bigger than 42!");
-    } else if number  == 42 {
+    } else if number == 42 {
         println!("The answer to the universe, the life and all!"); 
     } else {
         println!("Your number is smaller than 42...");
