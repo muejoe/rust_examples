@@ -28,7 +28,6 @@ fn main() {
     ];
 
     loop {
-
         println!("\nList of topics:");
         println!("┌────────────────────────────────────────────┐");
         
@@ -51,12 +50,10 @@ fn main() {
 
                     if number < 1 {break};
 
-                    let index: usize = (number-1) as usize;
+                    let index = (number-1) as usize;
                     if let Some(example) = examples.get(index) {
                         (example.function)();
-                        println!("\n< Press enter to continue >");
-                        let mut input = String::new();
-                        std::io::stdin().read_line(&mut input).expect("-");
+                        press_enter_to_continue();
                     } 
                 },
                 Err(_) => continue
@@ -64,4 +61,10 @@ fn main() {
         }
     }
 
+}
+
+fn press_enter_to_continue() {
+    println!("\n< Press enter to continue >");
+    let mut input = String::new();
+    std::io::stdin().read_line(&mut input).expect("-");
 }
